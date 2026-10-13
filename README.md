@@ -141,6 +141,27 @@ The file replaces the defaults as a whole, so give all three keys. Run `/reload`
 | `vercel-ai-gateway/typesafe-ai/jev` | `AI_GATEWAY_API_KEY` |
 | `cloudflare-workers-ai/typesafe/jev` | `CLOUDFLARE_API_KEY` and `CLOUDFLARE_ACCOUNT_ID` |
 
+### Example: disable Astra and the highest thinking levels
+
+This config never routes to Astra and never uses `xhigh` or `max`:
+
+```json
+{
+  "classifier": "typesafe/jev-latest",
+  "tiers": {
+    "simple": "openai-codex/gpt-6-luna",
+    "standard": "openai-codex/gpt-6-sol"
+  },
+  "thinkingLevels": ["low", "medium", "high"]
+}
+```
+
+Jev now chooses between two tiers and three thinking levels. The criteria for the remaining options are unchanged, so a hard prompt goes to the strongest tier and level you left on. With this config, prompt 4 from [Try it](#try-it) (the production deadlock) routes to `gpt-6-sol` with thinking `high` instead of to Astra.
+
+Keep all three keys: the file replaces the defaults as a whole, so a config that lists only `tiers` is an error. Run `/reload` in Pi after saving it.
+
+### Rules
+
 Each of `tiers` and `thinkingLevels` needs at least two entries for Jev to choose between. The tier names and Jev's criteria for them are fixed in [`pi-jev-model-router.ts`](pi-jev-model-router.ts). Criteria wording moves results a lot, so if you change them in a clone of the repository, test on your own prompts. A clone installs with `npm install && pi install .` and loads in place, so `/reload` picks up edits.
 
 ## Errors
