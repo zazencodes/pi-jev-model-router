@@ -17,13 +17,13 @@ Prompts without `/jev` behave exactly like stock Pi.
 You need [Pi](https://pi.dev/) (tested with 1.0.2) and a TypeSafe API key from <https://console.typesafe.ai/keys>.
 
 ```bash
-pi install git:github.com/zazencodes/pi-jev-model-router
+pi install npm:@zazencodes/pi-jev-model-router
 ```
 
-Pi clones the repository and installs its one dependency, `@typesafe-ai/sdk`. Add `-l` to install it for the current project only. To pull the latest version later:
+Pi installs the package and its one dependency, `@typesafe-ai/sdk`. Add `-l` to install it for the current project only. To pull the latest version later:
 
 ```bash
-pi update git:github.com/zazencodes/pi-jev-model-router
+pi update npm:@zazencodes/pi-jev-model-router
 ```
 
 The extension reads `TYPESAFE_API_KEY` from the environment, so export it before you start Pi:
@@ -36,7 +36,7 @@ pi
 To try it for one run without installing:
 
 ```bash
-pi -e git:github.com/zazencodes/pi-jev-model-router
+pi -e npm:@zazencodes/pi-jev-model-router
 ```
 
 If `/jev` is sent to the model as plain text instead of showing a `Jev: …` notification, the extension isn't loaded. Check `pi list`.
