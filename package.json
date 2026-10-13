@@ -1,6 +1,6 @@
 {
   "name": "@zazencodes/pi-jev-model-router",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Pi extension: /jev <prompt> lets Jev pick the model and thinking level for one prompt",
   "keywords": [
     "pi-package",
