@@ -23,9 +23,6 @@
     "pi-jev-model-router.ts",
     "CHANGELOG.md"
   ],
-  "dependencies": {
-    "@typesafe-ai/sdk": "^0.6.0"
-  },
   "peerDependencies": {
     "@earendil-works/pi-coding-agent": "*"
   },
