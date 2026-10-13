@@ -132,6 +132,10 @@ The extension fails loudly and has no fallback model. You get an error when:
 - `pi.setModel` fails, usually because the provider isn't logged in. Run `/login`.
 - A mid-session switch needs confirmation and Pi has no UI (print or RPC mode).
 
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md). Releases are tagged `vX.Y.Z` and follow semver: a patch release fixes bugs or docs, a minor release adds features, and a major release contains breaking changes.
+
 ## License
 
 [GPLv3](LICENSE). You can use, modify and share this code, and any version you distribute must also be released under GPLv3.

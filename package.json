@@ -20,7 +20,8 @@
   "bugs": "https://github.com/zazencodes/pi-jev-model-router/issues",
   "type": "module",
   "files": [
-    "pi-jev-model-router.ts"
+    "pi-jev-model-router.ts",
+    "CHANGELOG.md"
   ],
   "dependencies": {
     "@typesafe-ai/sdk": "^0.6.0"
