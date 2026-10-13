@@ -1,0 +1,36 @@
+{
+  "name": "pi-jev-model-router",
+  "version": "1.0.0",
+  "description": "Pi extension: /jev <prompt> lets Jev pick the model and thinking level for one prompt",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "jev",
+    "typesafe",
+    "model-router"
+  ],
+  "license": "GPL-3.0-only",
+  "author": "Alexander Galea <alex@galea.dev>",
+  "homepage": "https://github.com/zazencodes/pi-jev-model-router#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zazencodes/pi-jev-model-router.git"
+  },
+  "bugs": "https://github.com/zazencodes/pi-jev-model-router/issues",
+  "type": "module",
+  "files": [
+    "pi-jev-model-router.ts"
+  ],
+  "dependencies": {
+    "@typesafe-ai/sdk": "^0.6.0"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "pi": {
+    "extensions": [
+      "./pi-jev-model-router.ts"
+    ]
+  }
+}
